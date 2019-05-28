@@ -4,7 +4,6 @@
 ## Dependencies
 Mandatory dependencies :
  - CMake (External download)
- - Boost >= 1.59
  - Eigen 3
 
 ## Linux Ubuntu installation
