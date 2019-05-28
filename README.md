@@ -14,19 +14,21 @@ Here is the list of the parameters :
 To use the compiled binary  :
 
 Example of command line
+
+  		
 Note that you need to execute the code in both forward and backward (-i) mode and compute your own mean on the PC_MSDM field from the output files to compute the metric.
 ```
-	Windows : 
-		PC-MSDM.exe cube.xyz cube_Octree_perc0_3.xyz pc_msdm  -r 0.007 -knn 5 -a 2	  			  //Forward
-		PC-MSDM.exe cube.xyz cube_Octree_perc0_3.xyz pc_msdm  -r 0.007 -knn 5 -a 2 -i 			  //Backward
-		
-	Linux : 
-		./PC-MSDM cube.xyz cube_Octree_perc0_3.xyz pc_msdm  -r 0.007 -knn 5 -a 2				  //Forward 
-		./PC-MSDM cube.xyz cube_Octree_perc0_3.xyz pc_msdm  -r 0.007 -knn 5 -a 2 -i    			  //Backward
+Windows : 
+	PC-MSDM.exe PointC_A.xyz PointC_B.xyz outputfile -r 0.007 -knn 5 -a 2	  			 
+	PC-MSDM.exe PointC_A.xyz PointC_B.xyz outputfile -r 0.007 -knn 5 -a 2 -i 			  
+	
+Linux : 
+	./PC-MSDM PointC_A.xyz PointC_B.xyz outputfile -r 0.007 -knn 5 -a 2				
+	./PC-MSDM PointC_A.xyz PointC_B.xyz outputfile -r 0.007 -knn 5 -a 2 -i    			
 ```
 
 You can build the documentation using [Doxygen](http://www.doxygen.nl/).
 
 ---
 
-Development of this software is part of the of the LIRIS research team [M2DISCO] https://liris.cnrs.fr/equipe/m2disco.
+Development of this software is part of the of the LIRIS research team [M2DISCO](https://liris.cnrs.fr/equipe/m2disco).
