@@ -12,10 +12,7 @@ Here is the list of the parameters :
 * -fq Keep the console open for single testing
 
 To use the compiled binary  :
-
-Example of command line
-
-  		
+	
 Note that you need to execute the code in both forward and backward (-i) mode and compute your own mean on the PC_MSDM field from the output files to compute the metric.
 ```
 Windows : 
@@ -25,6 +22,26 @@ Windows :
 Linux : 
 	./PC-MSDM PointC_A.xyz PointC_B.xyz outputfile -r 0.007 -knn 5 -a 2				
 	./PC-MSDM PointC_A.xyz PointC_B.xyz outputfile -r 0.007 -knn 5 -a 2 -i    			
+```
+
+Input files must be formated this way: x_pos y_pos z_pos
+```
+-0.067 0.061558 0.020109
+-0.0782 0.071279 0.021032
+-0.062116 0.045145 0.037802
+-0.065473 0.039513 0.037964
+-0.06725 0.03742 0.033413
+-0.072702 0.065008 0.018701
+-0.06145 0.059165 0.018731
+-0.0675 0.061479 0.019221
+-0.057411 0.054114 0.0038257
+-0.079222 0.070654 0.017735
+-0.062473 0.04468 0.01111		
+```
+
+You can set your own file parser by modifying this function in PointSet.h : 
+```C++
+	void readPointCloud(std::ifstream &f) 
 ```
 
 You can build the documentation using [Doxygen](http://www.doxygen.nl/).
