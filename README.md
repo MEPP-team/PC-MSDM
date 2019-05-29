@@ -53,10 +53,9 @@ You can build the documentation using [Doxygen](http://www.doxygen.nl/).
 
 
 
+---
+
 
 Reference : PC-MSDM: A quality metric for 3D point clouds Gabriel Meynet, [Julie Digne](https://perso.liris.cnrs.fr/julie.digne/), [Guillaume Lavoué](https://perso.liris.cnrs.fr/guillaume.lavoue/), International Conference on Quality of Multimedia Experience ([QoMEX](https://www.qomex2019.de/qomexup/)), short paper, Berlin, Germany, 2019 
 
-
-
 Development of this software is part of the of the LIRIS research team [M2DISCO](https://liris.cnrs.fr/equipe/m2disco).
----
