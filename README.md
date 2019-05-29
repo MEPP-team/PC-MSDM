@@ -5,9 +5,7 @@ PC-MSDM, an objective metric for visual quality assessment of 3D point clouds. T
 
 This project is the implementation of our paper "[PC-MSDM: A quality metric for 3D point clouds](https://perso.liris.cnrs.fr/guillaume.lavoue/travaux/conference/Qomex2019.pdf)"
 
----
-Reference : Gabriel Meynet, [Julie Digne](https://perso.liris.cnrs.fr/julie.digne/), [Guillaume Lavoué](https://perso.liris.cnrs.fr/guillaume.lavoue/), International Conference on Quality of Multimedia Experience ([QoMEX](https://www.qomex2019.de/qomexup/)), short paper, Berlin, Germany, 2019 
----
+
 
 Here is the list of the parameters : 
 
@@ -54,5 +52,6 @@ You can set your own file parser by modifying this function in PointSet.h :
 You can build the documentation using [Doxygen](http://www.doxygen.nl/).
 
 ---
-
+Reference :"PC-MSDM: A quality metric for 3D point clouds" Gabriel Meynet, [Julie Digne](https://perso.liris.cnrs.fr/julie.digne/), [Guillaume Lavoué](https://perso.liris.cnrs.fr/guillaume.lavoue/), International Conference on Quality of Multimedia Experience ([QoMEX](https://www.qomex2019.de/qomexup/)), short paper, Berlin, Germany, 2019 
+---
 Development of this software is part of the of the LIRIS research team [M2DISCO](https://liris.cnrs.fr/equipe/m2disco).
