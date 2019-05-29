@@ -24,7 +24,7 @@ Linux :
 	./PC-MSDM PointC_A.xyz PointC_B.xyz outputfile -r 0.007 -knn 5 -a 2 -i    			
 ```
 
-Input files must be formated this way: x_pos y_pos z_pos
+Input files must be formated this way : x_pos y_pos z_pos
 ```
 -0.067 0.061558 0.020109
 -0.0782 0.071279 0.021032
