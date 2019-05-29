@@ -360,15 +360,15 @@ int main(int argc, char** argv) {
 	double RadiusCurvature = 0.007; //Radius used to compute curvature in MSDM2 => We only use it for the radius search in compute_statistics
 	int threshold_knnsearch = 15; //Minimum threshold for the Knn-search 
 	double a = 3.0; //Minkowski sum parameter.
-
+	if (argc < 3) {
+		std::cerr << "Error with arguments usage : \n\t REF_file REG_file Output_file \n\t (Options) (--fastquit || -fq) (-r radius) (-knn nb_point) (-a power) (-i inverse)" << std::endl;
+		return EXIT_FAILURE;
+	}
 	//First and second arguments are the filenames of your point cloud
 	std::string reffile = argv[1]; 
 	std::string regfile = argv[2];
 	std::string out_filename = argv[3]; //Output file
-	if (argc < 2) {
-		std::cerr << "Usage: " << argv[0] << "REF_file REG_file Output_file (Options) (--fastquit || -fq) (-r radius) (-knn nb_point) (-a power)" << std::endl;
-		return -1;
-	}
+
 	/* Example of command line
 	Note that you need to execute the code in both forward and backward (-i) and do your own Mean on the PC_MSDM field from the output files.
 		Windows : 
@@ -399,8 +399,8 @@ int main(int argc, char** argv) {
 				std::cout << "RadiusCurvature set to : "<< RadiusCurvature << std::endl;
 			}
 			else {
-				std::cerr << "-r option requires one argument." << std::endl;
-				return -1;
+				std::cerr << "Error : -r option requires one argument." << std::endl;
+				return EXIT_FAILURE;
 			}
 		}
 
@@ -413,8 +413,8 @@ int main(int argc, char** argv) {
 				std::cout << "threshold_knnsearch set to : " << threshold_knnsearch << std::endl;
 			}
 			else {
-				std::cerr << "-knn option requires one argument." << std::endl;
-				return -1;
+				std::cerr << "Error : -knn option requires one argument." << std::endl;
+				return EXIT_FAILURE;
 			}
 		}
 
@@ -427,8 +427,8 @@ int main(int argc, char** argv) {
 				std::cout << "a set to : " << a << std::endl;
 			}
 			else {
-				std::cerr << "-a option requires one argument." << std::endl;
-				return -1;
+				std::cerr << "Error : -a option requires one argument." << std::endl;
+				return EXIT_FAILURE;
 			}
 		}
 
@@ -448,19 +448,37 @@ int main(int argc, char** argv) {
 	std::cout << "Input reference point set file:  " << reffile << std::endl;
 	std::cout << "Input registered point set file:  " << regfile << std::endl;
 
+	PointSet refptset;
+	PointSet regptset;
+
 	std::ifstream f;
 	f.open(reffile.c_str()); //open file
-	PointSet refptset;
-	refptset.readPointCloud(f);//Read file and set data to Pointset - Check the function to match your file format. Default : x,y,z
-	f.close();
-	std::cout << refptset.npts() << " points in the reference point set" << std::endl;
+	if (f.is_open())
+	{
+		refptset.readPointCloud(f);//Read file and set data to Pointset - Check the function to match your file format. Default : x,y,z
+		f.close();
+		std::cout << refptset.npts() << " points in the reference point set" << std::endl;
+	}
+	else
+	{
+		std::cout << "Error opening file : " << reffile.c_str() << std::endl;
+		return EXIT_FAILURE;
+	}
+
+
 
 	f.open(regfile.c_str());
-	PointSet regptset;
-	regptset.readPointCloud(f);
-	f.close();
-	std::cout << regptset.npts() << " points in the registered point set" << std::endl;
-
+	if (f.is_open())
+	{
+		regptset.readPointCloud(f);
+		f.close();
+		std::cout << regptset.npts() << " points in the registered point set" << std::endl;
+	}
+	else
+	{
+		std::cout << "Error opening file : " << regfile.c_str() << std::endl;
+		return EXIT_FAILURE;
+	}
 
 	//building kdtree structures
 	KdTree m_kdtree(3, refptset, KDTreeSingleIndexAdaptorParams(10));
