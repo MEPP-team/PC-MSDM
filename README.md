@@ -2,9 +2,12 @@
 ---
 
 PC-MSDM, an objective metric for visual quality assessment of 3D point clouds. This full-reference metric is based on local curvature statistics and can be viewed as an extension for point clouds of the MSDM metric suited for 3D meshes that you can find on the [MEPP plateform](https://github.com/MEPP-team/MEPP). 
-This project is the implementation of our paper "[PC-MSDM: A quality metric for 3D point clouds](https://perso.liris.cnrs.fr/guillaume.lavoue/travaux/conference/Qomex2019.pdf)"
-Ref : Gabriel Meynet, [Julie Digne](https://perso.liris.cnrs.fr/julie.digne/), [Guillaume Lavoué](https://perso.liris.cnrs.fr/guillaume.lavoue/), International Conference on Quality of Multimedia Experience ([QoMEX](https://www.qomex2019.de/qomexup/)), short paper, Berlin, Germany, 2019 
 
+This project is the implementation of our paper "[PC-MSDM: A quality metric for 3D point clouds](https://perso.liris.cnrs.fr/guillaume.lavoue/travaux/conference/Qomex2019.pdf)"
+
+---
+Reference : Gabriel Meynet, [Julie Digne](https://perso.liris.cnrs.fr/julie.digne/), [Guillaume Lavoué](https://perso.liris.cnrs.fr/guillaume.lavoue/), International Conference on Quality of Multimedia Experience ([QoMEX](https://www.qomex2019.de/qomexup/)), short paper, Berlin, Germany, 2019 
+---
 
 Here is the list of the parameters : 
 
