@@ -8,5 +8,4 @@ PC-MSDM is distributed under the GNU Lesser General Public License Version 3.0 (
 | Package         |    License    | Included headers / Notes |
 | --------------- | ------------- | ------------------------ |
 |[Eigen3](https://eigen.tuxfamily.org/)|[MPL2](http://eigen.tuxfamily.org/index.php?title=Main_Page#License)||
-|[Flan](http://www.cs.ubc.ca/research/flann/)|[BSD](http://www.cs.ubc.ca/research/flann/)||
 |[Nanoflann](https://github.com/jlblancoc/nanoflann)|[BSD](http://www.cs.ubc.ca/research/flann/)||
