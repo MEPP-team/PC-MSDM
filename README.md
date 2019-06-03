@@ -44,12 +44,23 @@ Input files must be formated this way : x_pos y_pos z_pos
 -0.062473 0.04468 0.01111		
 ```
 
+In the example folder, you will find two points clouds and the output files of a simulation.
+Output file looks like :
+```
+Reference;Registered;PC_MSDM;Radius;Knn;Power;
+PointC_A;PointC_B;0.061558;0.002;5;2
+PointC_A;PointC_C;0.590933;0.002;5;2
+PointC_A;PointC_D;0.8874051;0.002;5;2
+PointC_A;PointC_E;0.2824346;0.002;5;2
+```
+
+
 You can set your own file parser by modifying this function in PointSet.h : 
 ```C++
 	void readPointCloud(std::ifstream &f) 
 ```
 
-You can build the documentation using [Doxygen](http://www.doxygen.nl/).
+The documentation can be build using [Doxygen](http://www.doxygen.nl/).
 
 
 
@@ -58,4 +69,4 @@ You can build the documentation using [Doxygen](http://www.doxygen.nl/).
 
 Reference : PC-MSDM: A quality metric for 3D point clouds Gabriel Meynet, [Julie Digne](https://perso.liris.cnrs.fr/julie.digne/), [Guillaume Lavoué](https://perso.liris.cnrs.fr/guillaume.lavoue/), International Conference on Quality of Multimedia Experience ([QoMEX](https://www.qomex2019.de/qomexup/)), short paper, Berlin, Germany, 2019 
 
-Development of this software is part of the of the LIRIS research team [M2DISCO](https://liris.cnrs.fr/equipe/m2disco).
+Development of this software is part of the [PISCo](https://liris.cnrs.fr/equipe/m2disco) research project. 
