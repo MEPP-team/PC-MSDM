@@ -4,11 +4,12 @@
 ## Dependencies
 Mandatory dependencies :
  - CMake (External download)
- - Eigen 3
+ - Eigen 3 (Included)
+ - Nanoflann (Included)
 
 ## Linux Ubuntu installation
 
-### Build stage
+### Building stage
 
 ## Windows installation
 
@@ -33,6 +34,6 @@ Mandatory dependencies :
 
 ## Documentation
 
-You can build the documentation by yourself using doxygen.
+The documentation can be build using [Doxygen](http://www.doxygen.nl/).
 
 ## Known issues
