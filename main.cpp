@@ -551,9 +551,9 @@ int main(int argc, char** argv) {
 		computeProjectionAndCurvature(origin, refptset.pts, ret_index_ref, proj, H);
 		computeProjectionAndCurvature(origin, regptset.pts, ret_index_reg, projOnMe, K);
 
-		meancurvaturesProj[i] = std::abs(H);
+		meancurvaturesProj[i] = std::abs(H)*maxDim;
 		projectedpointsOnRef[i] = proj;
-		meancurvaturesMe[i] = std::abs(K);
+		meancurvaturesMe[i] = std::abs(K)*maxDim;
 		projectedpointsOnMe[i] = projOnMe;
 	}
 
