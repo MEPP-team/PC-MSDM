@@ -9,7 +9,7 @@ This project is the implementation of our paper "[PC-MSDM: A quality metric for 
 
 Here is the list of the parameters : 
 
-* -r   Set the radius for the Knn-RadiusSearch.
+* -r   Set a radius factor for the Knn-RadiusSearch. (The bounding box is already computed by this program, just use factor value) 
 * -knn Set the number of points used for the quadric surface construction.
 * -a   Set the power value of the metric calculus.
 * -fq Keep the console open for single testing
